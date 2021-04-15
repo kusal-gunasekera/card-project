@@ -63,7 +63,7 @@ app.post("/game/join", function(req,res) {
   var userDoesExist = checkUserExists(username);
   var gameStarted = lobbyList[gameCode].gameStarted;
 
-  if (!userDoesExist && lobbyExists && !gameStarted) {
+  if (!userDoesExist && lobbyExists) {
     console.log("No user exists");
     console.log("Lobby does exist");
     createPlayer(username, ip, false);
