@@ -253,8 +253,9 @@ app.get("*", function(req,res) {
   res.send("Error, page not found");
 })
 
-http.listen(3024 ,function(){
-  console.log('listening on *:3024');
+const port = process.env.PORT || 3000;
+http.listen(port,function(){
+  console.log(`listening on *:${port}`);
 });
 
 ///////////////////////////////////////////////////Functions/////////////////////////////////////////
